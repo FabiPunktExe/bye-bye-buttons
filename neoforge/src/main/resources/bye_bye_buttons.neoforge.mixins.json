@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "de.fabiexe.byebyebuttons.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [],
+  "client": [
+    "PauseScreenBugReportButtonMixin",
+    "PauseScreenFeedbackButtonMixin",
+    "PauseScreenFriendsButtonMixin",
+    "PauseScreenPlayerReportingButtonMixin",
+    "TitleScreenAccessibilityButtonMixin",
+    "TitleScreenFriendsButtonMixin",
+    "TitleScreenLanguageButtonMixin"
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

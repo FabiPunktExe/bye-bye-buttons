@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "bye_bye_buttons",
+  "version": "${version}",
+  "name": "Bye Bye Buttons",
+  "description": "This mod removes all unwanted buttons from Minecraft",
+  "authors": [
+    "Fabi.exe"
+  ],
+  "contact": {
+    "sources": "https://github.com/FabiPunktExe/bye-bye-buttons"
+  },
+  "license": "MIT",
+  "icon": "bye_bye_buttons.png",
+  "environment": "client",
+  "entrypoints": {},
+  "mixins": [
+    "bye_bye_buttons.mixins.json",
+    "bye_bye_buttons.fabric.mixins.json"
+  ],
+  "depends": {
+    "java": ">=${java_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}

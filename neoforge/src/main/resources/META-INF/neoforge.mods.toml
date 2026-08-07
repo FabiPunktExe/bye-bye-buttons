@@ -1,0 +1,33 @@
+modLoader = "javafml"
+loaderVersion = "[${neoforge_loader_version},)"
+license = "MIT"
+issueTrackerURL="https://github.com/FabiPunktExe/bye-bye-buttons/issues"
+
+[[mods]]
+modId = "bye_bye_buttons"
+version = "${version}"
+displayName = "Bye Bye Buttons"
+displayURL = "https://github.com/FabiPunktExe/bye-bye-buttons"
+logoFile = "bye_bye_buttons.png"
+authors = "Fabi.exe"
+description = "This mod removes all unwanted buttons from Minecraft"
+
+[[mixins]]
+config = "bye_bye_buttons.mixins.json"
+
+[[mixins]]
+config = "bye_bye_buttons.neoforge.mixins.json"
+
+[[dependencies.bye_bye_buttons]]
+modId = "neoforge"
+type = "required"
+versionRange = "[${neoforge_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.bye_bye_buttons]]
+modId = "minecraft"
+type = "required"
+versionRange = "[${minecraft_version},)"
+ordering = "NONE"
+side = "BOTH"
