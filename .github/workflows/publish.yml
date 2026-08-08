@@ -45,6 +45,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          for file in build/libs/*
+          for file in fabric/build/libs/*
+          do gh release upload ${{ github.event.inputs.version }} $file
+          done
+          for file in neoforge/build/libs/*
           do gh release upload ${{ github.event.inputs.version }} $file
           done
