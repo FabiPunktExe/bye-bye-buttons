@@ -3,8 +3,10 @@
 
 ---
 
-This mod removes all unwanted buttons from Minecraft. \
+This mod removes all unwanted buttons from Minecraft.
+
 This mod is plug-and-play. No configuration is required.
+Every button (except for the option buttons) has another way to access its functionality, e.g. keybinds.
 
 ## Removed Buttons
 - Realms button (title screen)
@@ -19,3 +21,4 @@ This mod is plug-and-play. No configuration is required.
 - Credits & Attribution button (options)
 - Multiplayer warning (when navigating from title screen to multiplayer screen)
 - The warning button for custom dialogs (replaced with a simple text label)
+- Cancel button (beacon screen)
