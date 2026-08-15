@@ -1,5 +1,6 @@
 package de.fabiexe.byebyebuttons.mixin;
 
+import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
@@ -16,6 +17,8 @@ public class TitleScreenRealmsButtonMixin {
                     target = "Lnet/minecraft/client/gui/screens/TitleScreen;addRenderableWidget(Lnet/minecraft/client/gui/components/events/GuiEventListener;)Lnet/minecraft/client/gui/components/events/GuiEventListener;",
                     ordinal = 3))
     public GuiEventListener removeRealmsButton(TitleScreen instance, GuiEventListener guiEventListener) {
-        return guiEventListener;
+        ((AbstractWidget) guiEventListener).active = false;
+        ((AbstractWidget) guiEventListener).visible = false;
+        return ((ScreenAccessor) instance).invokeAddRenderableWidget((AbstractWidget) guiEventListener);
     }
 }
