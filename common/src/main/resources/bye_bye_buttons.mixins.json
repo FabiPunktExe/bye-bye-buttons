@@ -9,7 +9,6 @@
     "DialogScreenWarningButtonMixin",
     "OptionsScreenCreditsAndAttributionButtonMixin",
     "OptionsScreenTelemetryDataButtonMixin",
-    "ScreenAccessor",
     "TitleScreenMultiplayerWarningMixin",
     "TitleScreenRealmsButtonMixin"
   ],

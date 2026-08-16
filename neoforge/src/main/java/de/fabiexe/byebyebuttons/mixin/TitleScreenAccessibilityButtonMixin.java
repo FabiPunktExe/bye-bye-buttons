@@ -1,24 +1,30 @@
 package de.fabiexe.byebyebuttons.mixin;
 
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import de.fabiexe.byebyebuttons.config.ByeByeButtonsConfig;
 import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
-import org.spongepowered.asm.mixin.injection.Redirect;
 
 /** This mixin removes the accessibility button from the title screen */
 @Mixin(TitleScreen.class)
 public class TitleScreenAccessibilityButtonMixin {
-    @Redirect(
+    @WrapOperation(
             method = "init",
             at = @At(
                     value = "INVOKE",
                     target = "Lnet/minecraft/client/gui/screens/TitleScreen;addRenderableWidget(Lnet/minecraft/client/gui/components/events/GuiEventListener;)Lnet/minecraft/client/gui/components/events/GuiEventListener;",
                     ordinal = 3))
-    public GuiEventListener removeButton1(TitleScreen instance, GuiEventListener guiEventListener) {
-        return guiEventListener;
+    public GuiEventListener removeButton1(TitleScreen instance, GuiEventListener guiEventListener, Operation<GuiEventListener> original) {
+        if (ByeByeButtonsConfig.TITLE_SCREEN_ACCESSIBILITY_BUTTON.get()) {
+            return original.call(instance, guiEventListener);
+        } else {
+            return guiEventListener;
+        }
     }
 
     @ModifyVariable(
@@ -27,7 +33,11 @@ public class TitleScreenAccessibilityButtonMixin {
             name = "numberOfButtons",
             order = 100)
     public int removeButton2(int numberOfButtons) {
-        return numberOfButtons - 1;
+        if (ByeByeButtonsConfig.TITLE_SCREEN_ACCESSIBILITY_BUTTON.get()) {
+            return numberOfButtons;
+        } else {
+            return numberOfButtons - 1;
+        }
     }
 
     @ModifyVariable(
@@ -35,7 +45,11 @@ public class TitleScreenAccessibilityButtonMixin {
             at = @At(value = "STORE", ordinal = 0),
             name = "currentButton")
     public int removeButton3(int currentButton) {
-        return currentButton - 1;
+        if (ByeByeButtonsConfig.TITLE_SCREEN_ACCESSIBILITY_BUTTON.get()) {
+            return currentButton;
+        } else {
+            return currentButton - 1;
+        }
     }
 
     @ModifyArg(
@@ -46,6 +60,10 @@ public class TitleScreenAccessibilityButtonMixin {
                     ordinal = 0),
             index = 1)
     public int removeButton4(int numberOfButtons) {
-        return numberOfButtons - 2;
+        if (ByeByeButtonsConfig.TITLE_SCREEN_ACCESSIBILITY_BUTTON.get()) {
+            return numberOfButtons;
+        } else {
+            return numberOfButtons - 2;
+        }
     }
 }

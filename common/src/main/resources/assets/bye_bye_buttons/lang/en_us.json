@@ -1,3 +1,19 @@
 {
-  "bye_bye_buttons.custom_screen_warning": "Created by the server"
+  "bye_bye_buttons.custom_screen_warning": "Created by the server",
+  "bye_bye_buttons.config.title": "Bye Bye Buttons Config",
+  "bye_bye_buttons.config.done": "Done",
+  "bye_bye_buttons.config.cancel": "Cancel",
+  "bye_bye_buttons.config.title_screen_realms_button": "Realms button (Title screen)",
+  "bye_bye_buttons.config.title_screen_accessibility_button": "Accessibility button (Title screen)",
+  "bye_bye_buttons.config.title_screen_friends_button": "Friends button (Title screen)",
+  "bye_bye_buttons.config.title_screen_language_button": "Language button (Title screen)",
+  "bye_bye_buttons.config.pause_screen_bug_report_button": "Bug report button (Pause screen)",
+  "bye_bye_buttons.config.pause_screen_feedback_button": "Feedback button (Pause screen)",
+  "bye_bye_buttons.config.pause_screen_friends_button": "Friends button (Pause screen)",
+  "bye_bye_buttons.config.pause_screen_player_reporting_button": "Player reporting button (Pause screen)",
+  "bye_bye_buttons.config.multiplayer_warning": "Multiplayer warning",
+  "bye_bye_buttons.config.telemetry_data_button": "Telemetry data button",
+  "bye_bye_buttons.config.credits_and_attribution_button": "Credits & Attribution button",
+  "bye_bye_buttons.config.dialog_warning_button": "Dialog warning button",
+  "bye_bye_buttons.config.beacon_cancel_button": "Cancel button (Beacon menu)"
 }

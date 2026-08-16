@@ -1,3 +1,19 @@
 {
-  "bye_bye_buttons.custom_screen_warning": "Vom Server erstellt"
+  "bye_bye_buttons.custom_screen_warning": "Vom Server erstellt",
+  "bye_bye_buttons.config.title": "Bye Bye Buttons Konfiguration",
+  "bye_bye_buttons.config.done": "Fertig",
+  "bye_bye_buttons.config.cancel": "Abbrechen",
+  "bye_bye_buttons.config.title_screen_realms_button": "Realms Button (Titelbildschirm)",
+  "bye_bye_buttons.config.title_screen_accessibility_button": "Barrierefreiheitseinstellungen Button (Titelbildschirm)",
+  "bye_bye_buttons.config.title_screen_friends_button": "Freunde Button (Titelbildschirm)",
+  "bye_bye_buttons.config.title_screen_language_button": "Sprache wechseln Button (Titelbildschirm)",
+  "bye_bye_buttons.config.pause_screen_bug_report_button": "Fehler melden Button (Pause-Bildschirm)",
+  "bye_bye_buttons.config.pause_screen_feedback_button": "Feedback heben Button (Pause-Bildschirm)",
+  "bye_bye_buttons.config.pause_screen_friends_button": "Freunde Button (Pause-Bildschirm)",
+  "bye_bye_buttons.config.pause_screen_player_reporting_button": "Spieler melden Button (Pause-Bildschirm)",
+  "bye_bye_buttons.config.multiplayer_warning": "Mehrspieler Warnung",
+  "bye_bye_buttons.config.telemetry_data_button": "Telemetriedaten-Button (Optionen)",
+  "bye_bye_buttons.config.credits_and_attribution_button": "Mitwirkende & Namensnennung-Button (Optionen)",
+  "bye_bye_buttons.config.dialog_warning_button": "Dialog Warnung",
+  "bye_bye_buttons.config.beacon_cancel_button": "Abbruch-Button (Leuchtfeuer-Menü)"
 }

@@ -1,6 +1,7 @@
 package de.fabiexe.byebyebuttons.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
+import de.fabiexe.byebyebuttons.config.ByeByeButtonsConfig;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
@@ -14,6 +15,6 @@ public class TitleScreenMultiplayerWarningMixin {
             at = @At(value = "FIELD", target = "Lnet/minecraft/client/Options;skipMultiplayerWarning:Z", opcode = Opcodes.GETFIELD),
             order = 100)
     public boolean removeWarning(boolean original) {
-        return true;
+        return !ByeByeButtonsConfig.MULTIPLAYER_WARNING.get() || original;
     }
 }

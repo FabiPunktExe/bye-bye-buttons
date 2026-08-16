@@ -13,7 +13,14 @@
   "license": "MIT",
   "icon": "bye_bye_buttons.png",
   "environment": "client",
-  "entrypoints": {},
+  "entrypoints": {
+    "client": [
+      "de.fabiexe.byebyebuttons.ByeByeButtonsFabric"
+    ],
+    "modmenu": [
+      "de.fabiexe.byebyebuttons.ModMenuIntegration"
+    ]
+  },
   "mixins": [
     "bye_bye_buttons.mixins.json",
     "bye_bye_buttons.fabric.mixins.json"
@@ -21,5 +28,8 @@
   "depends": {
     "java": ">=${java_version}",
     "minecraft": "${minecraft_version}"
+  },
+  "suggests": {
+    "modmenu": "*"
   }
 }
