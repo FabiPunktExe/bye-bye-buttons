@@ -28,7 +28,7 @@ public final class ByeByeButtonsFabric implements ClientModInitializer {
             Files.createDirectories(path.getParent());
             JsonObject config = new JsonObject();
             for (ConfigPart<?> configPart : ByeByeButtonsConfig.ALL_CONFIG_PARTS) {
-                config.addProperty(configPart.getName(), (boolean) configPart.getValue());
+                config.addProperty(configPart.getName(), (Boolean) configPart.getValue());
             }
             Files.writeString(path, config.toString());
         } catch (IOException e) {
