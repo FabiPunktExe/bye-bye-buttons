@@ -3,6 +3,7 @@ package de.fabiexe.byebyebuttons;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.google.gson.JsonPrimitive;
 import de.fabiexe.byebyebuttons.config.ByeByeButtonsConfig;
 import de.fabiexe.byebyebuttons.config.ConfigPart;
 import net.fabricmc.api.ClientModInitializer;
@@ -55,8 +56,8 @@ public final class ByeByeButtonsFabric implements ClientModInitializer {
     @SuppressWarnings("unchecked")
     private static <T> void loadConfigPart(ConfigPart<T> configPart, JsonObject config) {
         JsonElement element = config.get(configPart.getName());
-        if (element != null) {
-            configPart.set((T) (Boolean) element.getAsBoolean());
+        if (element instanceof JsonPrimitive primitive && primitive.isBoolean()) {
+            configPart.set((T) (Boolean) primitive.getAsBoolean());
         }
     }
 }
