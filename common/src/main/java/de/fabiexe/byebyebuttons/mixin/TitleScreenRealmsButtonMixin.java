@@ -8,6 +8,8 @@ import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 /** This mixin removes the realms button from the title screen */
 @Mixin(TitleScreen.class)
@@ -24,5 +26,15 @@ public class TitleScreenRealmsButtonMixin {
             ((AbstractWidget) guiEventListener).visible = false;
         }
         return original.call(instance, guiEventListener);
+    }
+
+    @Inject(
+            method = "realmsNotificationsEnabled",
+            at = @At(value = "HEAD"),
+            cancellable = true)
+    public void realmsNotificationsEnabled(CallbackInfoReturnable<Boolean> cir) {
+        if (!ByeByeButtonsConfig.TITLE_SCREEN_REALMS_BUTTON.get()) {
+            cir.setReturnValue(false);
+        }
     }
 }

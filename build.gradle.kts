@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "de.fabiexe"
-version = "1.0.3"
+version = "1.0.4"
 
 multiloader {
     javaVersion = libs.versions.java.get().toInt()
