@@ -8,7 +8,7 @@ neoforge-neoforge = "26.2.0.1-beta"
 neoforge-moddev = "2.0.144"
 neoforge-neoform = "26.2-2"
 neoforge-loader = "4"
-mixinExtras = "0.5.4"
+mixinExtras = "0.5.5"
 minotaur = "2.9.0"
 modmenu = "20.0.1"
 
