@@ -9,7 +9,7 @@ neoforge-moddev = "2.0.147"
 neoforge-neoform = "26.2-2"
 neoforge-loader = "4"
 mixinExtras = "0.5.5"
-minotaur = "2.9.0"
+minotaur = "2.10.0"
 modmenu = "20.0.2"
 
 [plugins]
