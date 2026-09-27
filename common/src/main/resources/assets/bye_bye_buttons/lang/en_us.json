@@ -1,6 +1,6 @@
 {
   "bye_bye_buttons.custom_screen_warning": "Created by the server",
-  "bye_bye_buttons.config.title": "Bye Bye Buttons Config",
+  "text.autoconfig.bye_bye_buttons.title": "Bye Bye Buttons Configuration",
   "bye_bye_buttons.config.done": "Done",
   "bye_bye_buttons.config.cancel": "Cancel",
   "bye_bye_buttons.config.title_screen_realms_button": "Realms button (Title screen)",

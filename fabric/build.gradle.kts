@@ -1,17 +1,29 @@
 plugins {
-    id("multiloader-loader")
+    id("convention")
+    alias(libs.plugins.multiloader.loader)
     alias(libs.plugins.fabric.loom)
     alias(libs.plugins.minotaur)
 }
 
+multiloader {
+    projectName = rootProject.name
+    javaVersion = libs.versions.java.get().toInt()
+    commonProject = project(":common")
+}
+
 repositories {
+    maven("https://repo.diruptio.de/repository/maven-public") // config
     maven("https://maven.terraformersmc.com") // Modmenu
+    maven("https://maven.shedaniel.me") // Cloth Config
 }
 
 dependencies {
     minecraft(libs.minecraft)
     implementation(libs.fabric.loader)
     implementation(libs.modmenu)
+    implementation(libs.config.clothconfig)
+    include(libs.config.clothconfig)
+    runtimeOnly(libs.clothConfig)
 }
 
 tasks {

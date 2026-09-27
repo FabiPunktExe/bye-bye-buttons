@@ -1,7 +1,14 @@
 plugins {
-    id("multiloader-loader")
+    id("convention")
+    alias(libs.plugins.multiloader.loader)
     alias(libs.plugins.neoforge.moddev)
     alias(libs.plugins.minotaur)
+}
+
+multiloader {
+    projectName = rootProject.name
+    javaVersion = libs.versions.java.get().toInt()
+    commonProject = project(":common")
 }
 
 neoForge {
@@ -19,6 +26,16 @@ neoForge {
             client()
         }
     }
+}
+
+repositories {
+    mavenCentral()
+    maven("https://repo.diruptio.de/repository/maven-public") // config
+}
+
+dependencies {
+    implementation(libs.config.neoforge)
+    jarJar(libs.config.neoforge)
 }
 
 tasks {

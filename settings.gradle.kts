@@ -1,9 +1,11 @@
 rootProject.name = "bye-bye-buttons"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
     repositories {
         gradlePluginPortal()
         mavenCentral()
+        maven("https://repo.diruptio.de/repository/maven-public")
         maven("https://maven.fabricmc.net")
     }
 }

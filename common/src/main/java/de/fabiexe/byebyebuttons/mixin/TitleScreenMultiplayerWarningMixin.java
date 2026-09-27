@@ -1,7 +1,7 @@
 package de.fabiexe.byebyebuttons.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import de.fabiexe.byebyebuttons.config.ByeByeButtonsConfig;
+import de.fabiexe.byebyebuttons.ByeByeButtonsConfig;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;

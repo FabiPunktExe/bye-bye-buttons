@@ -2,7 +2,7 @@ package de.fabiexe.byebyebuttons.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import de.fabiexe.byebyebuttons.config.ByeByeButtonsConfig;
+import de.fabiexe.byebyebuttons.ByeByeButtonsConfig;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.client.gui.screens.TitleScreen;
