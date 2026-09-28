@@ -12,7 +12,7 @@ neoforge-neoforge = "26.3.0.22-beta"
 neoforge-loader = "4"
 mixinExtras = "0.5.5"
 minotaur = "2.10.0"
-modmenu = "20.0.2"
+modmenu = "20.0.3"
 
 [plugins]
 multiloader-common = { id = "de.fabiexe.minecraft-multiplatform.multiloader.common", version.ref = "minecraftMultiplatform-multiloader" }
