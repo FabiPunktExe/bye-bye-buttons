@@ -1,6 +1,6 @@
 [versions]
 minecraftMultiplatform-multiloader = "0.1.0"
-minecraftMultiplatform-config = "0.1.0"
+minecraftMultiplatform-config = "0.1.1"
 java = "25"
 minecraft = "26.3"
 fabric-loom = "1.18.2"
@@ -29,5 +29,5 @@ mixinExtras = { module = "io.github.llamalad7:mixinextras-common", version.ref =
 config = { module = "de.fabiexe.minecraft-multiplatform:config-common", version.ref = "minecraftMultiplatform-config" }
 config-clothconfig = { module = "de.fabiexe.minecraft-multiplatform:config-clothconfig", version.ref = "minecraftMultiplatform-config" }
 config-neoforge = { module = "de.fabiexe.minecraft-multiplatform:config-neoforge", version.ref = "minecraftMultiplatform-config" }
-clothConfig = { module = "me.shedaniel.cloth:cloth-config", version.ref = "clothConfig" }
+clothConfig-fabric = { module = "me.shedaniel.cloth:cloth-config-fabric", version.ref = "clothConfig" }
 modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }

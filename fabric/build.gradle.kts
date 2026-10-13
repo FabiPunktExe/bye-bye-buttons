@@ -21,9 +21,12 @@ dependencies {
     minecraft(libs.minecraft)
     implementation(libs.fabric.loader)
     implementation(libs.modmenu)
+    include(libs.config)
     implementation(libs.config.clothconfig)
     include(libs.config.clothconfig)
-    runtimeOnly(libs.clothConfig)
+    runtimeOnly(libs.clothConfig.fabric) {
+        exclude(group = "net.fabricmc.fabric-api")
+    }
 }
 
 tasks {
@@ -51,4 +54,8 @@ modrinth {
     uploadFile = tasks.jar.get()
     gameVersions = listOf(libs.versions.minecraft.get())
     loaders = listOf("fabric")
+    dependencies {
+        optional.project("modmenu")
+        required.project("cloth-config")
+    }
 }
